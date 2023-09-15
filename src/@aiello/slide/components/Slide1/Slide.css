@@ -1,0 +1,85 @@
+.root {
+    margin: 15px 0;
+}
+
+.section {
+    border-color: rgb(var(--venia-border));
+    
+    
+    margin: 0 1.5rem;
+    padding: 1.5rem 0;
+}
+.myStyle{
+   
+   height: 700px;
+   
+    
+}
+.bottone {
+    text-align: center;
+    padding-inline-start: 100px;
+    font-size: 30px;
+    
+}
+/* Slideshow */
+
+.slideshow {
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 500px;
+  }
+  
+  .slideshowSlider {
+    white-space: nowrap;
+    transition: ease 1000ms;
+  }
+  
+  .slide {
+    display: inline-block;
+  
+    height: 400px;
+    width: 100%;
+    border-radius: 40px;
+  }
+  
+  /* Buttons */
+  
+  .slideshowDots {
+    text-align: center;
+  }
+  
+  .slideshowDot {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+  
+    cursor: pointer;
+    margin: 15px 7px 0px;
+  
+    background-color: #c4c4c4;
+  }
+  .hellopwa{
+    box-decoration-break: slice;
+    box-sizing: border-box;
+    text-align: center;
+    border-color: rgb(var(--venia-border));
+    color: rgb(27, 110, 219); 
+    text-align: right;
+    place-content: center;
+    font-size: 2.25rem;
+    padding-inline-start: 100px;
+  }
+  .testcart{
+    
+    border-color: red;
+    border-style: dotted;
+    border-width: 10px;
+    background-color:azure;
+  }
+  .linkcart{
+text-align: center;
+
+
+  }
+;
