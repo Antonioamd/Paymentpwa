@@ -83,8 +83,13 @@ const Shipping = () => {
         toggleSignInContent
     } = talonProps;
     const [, { addToast }] = useToasts();
-
+    const [prodotti,setProdotti]=useState(false);
     useEffect(() => {
+        if(Array.isArray(cartItems)&& cartItems.length==0){
+setProdotti(false);
+        }
+        else
+        setProdotti(true);
         if (hasError) {
             const message =
                 error && error.message
@@ -172,7 +177,7 @@ const Shipping = () => {
     }
 
 
-    
+
     
     //const test232 = 
     const shippingMethodSection =
@@ -195,27 +200,34 @@ const Shipping = () => {
                 </h3>
         
     );
+const checkout = (<div>
+   
+   
+<ScrollAnchor ref={shippingInformationRef}>
+    <ShippingInformation
+                     onSave={setShippingInformationDone}
+                     onSuccess={scrollShippingInformationIntoView}
+                     toggleActiveContent={toggleAddressBookContent}
+                     toggleSignInContent={toggleSignInContent}
+                     setGuestSignInUsername={setGuestSignInUsername}
+                 />
+</ScrollAnchor>
+
+
+<ScrollAnchor ref={shippingMethodRef}>
+{shippingMethodSection}
+</ScrollAnchor>
+            
+           
+            <div> 
+         {paymentInformationSection}  
+         </div>
+ </div>
+
+);
 
     return (
-        <div >
-           <ShippingInformation
-                            onSave={setShippingInformationDone}
-                            onSuccess={scrollShippingInformationIntoView}
-                            toggleActiveContent={toggleAddressBookContent}
-                            toggleSignInContent={toggleSignInContent}
-                            setGuestSignInUsername={setGuestSignInUsername}
-                        />
-
-
-       
-      
-      {shippingMethodSection}
-                   
-                  
-                   <div> 
-                {paymentInformationSection}  
-                </div>
-        </div>
+        <div>{checkout}</div>
 
     );
 

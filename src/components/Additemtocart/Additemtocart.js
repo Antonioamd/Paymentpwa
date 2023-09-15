@@ -77,18 +77,29 @@ useEffect(() => {
 },[activeAddToCartItem]);
 
 const productListing = hasItems ? (
+
+<div>
   <ProductListing
       onAddToWishlistSuccess={onAddToWishlistSuccess}
       setIsCartUpdating={setIsCartUpdating}
       fetchCartDetails={fetchCartDetails}
   />
+ 
+<h1 style={wave}>Checkout</h1>
+<Shipping/>
+</div>
+
+
 ) : (
+  <div>
   <h3>
       <FormattedMessage
           id={'cartPage.emptyCart'}
-          defaultMessage={'There are no items in your cart.'}
+          defaultMessage={'Inserisci il prodotto nel carrello.'}
       />
-  </h3>
+       </h3>
+    <h1 style={wave}>Inserisci il prodotto nel Carrello</h1>  
+    </div> 
 );
       const [{cartId}]= useCartContext();
       
@@ -131,8 +142,8 @@ const productListing = hasItems ? (
                </div>
               <div>
                 <h2 style={wave}>
-                 Checkout
-                  <Shipping/>
+                 
+                 
                 </h2>
              
               </div> 
