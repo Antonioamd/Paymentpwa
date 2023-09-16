@@ -5,9 +5,7 @@ import { useParams } from "react-router-dom";
 import Checkout from "@magento/venia-ui/lib/components/CheckoutPage";
 import CartPage from "@magento/venia-ui/lib/components/CartPage";
 import { useCartContext } from "@magento/peregrine/lib/context/cart";
-
 import  Additemtocart  from "../Additemtocart";
-
 const hi = {
   textAlign: "center",
   margin: "1rem",
@@ -20,9 +18,6 @@ const wave = {
 const GreetingPage = () => {
   const { who = "" } = useParams();
   
-  
-  const registrati = (1===1) ? (<div>Ti devi registrare</div>)
-  : (<Additemtocart/>);
 const [{cartId}]= useCartContext();
   return (
     <div>
@@ -33,7 +28,7 @@ const [{cartId}]= useCartContext();
         Simulazione  Processo di   Pagamento   
        </h2>
        
-{registrati}
+<Additemtocart/>
        
       </div>
     </div>
