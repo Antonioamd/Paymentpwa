@@ -55,6 +55,7 @@
     "@magento/pwa-theme-venia": "~1.4.0",
     "@magento/upward-security-headers": "~1.0.14",
     "@magento/venia-sample-payments-checkmo": "^0.0.12",
+    "@aiello/payment":"/home/antonio/Sites/venia/src",
     "@magento/venia-ui": "~10.2.0",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.1",
     "@storybook/react": "~6.3.7",
